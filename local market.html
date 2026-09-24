@@ -1,0 +1,473 @@
+<DOCTYPE>
+<html>
+<head>
+<title>Slide HTML</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffaf0;
+    color: #1d1d1d;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .navbar {
+    background: linear-gradient(135deg, #f5ec9d, #f0d66b);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #b57f00;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  }
+  .navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #2d2d2d;
+    text-transform: capitalize;
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .buttons a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: #fff8d9;
+    color: #2d2d2d;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+  .buttons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+  .welcomesection {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img1.WEBP') center/cover no-repeat;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .backbody {
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+  }
+  .tagline {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffe69a;
+    font-weight: 700;
+  }
+  .backbody h1 {
+    margin: 0 0 15px;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1.1;
+  }
+  .backbody p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #f3f3f3;
+  }
+  .products {
+    padding: 60px 20px 40px;
+    background: #fffaf0;
+  }
+  .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .section-heading span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #b57f00;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+  }
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: #222;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
+    hover:{
+        background-color:rgb(221, 207, 207);
+    }
+  }
+  .card {
+    flex: 1 1 260px;
+    max-width: 320px;
+    background: linear-gradient(180deg, #ffb347, #ff8c42);
+    padding: 28px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #fff;
+  }
+  .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .card h3 {
+    margin: 0 0 12px;
+    font-size: 1.6rem;
+  }
+  .card p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #fffaf1;
+  }
+  .shop-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+  }
+  .shop-item {
+    flex: 1 1 220px;
+    max-width: 260px;
+    background: #fff;
+    border: 1px solid #f5d77c;
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+  .shop-item h3 {
+    margin: 0 0 18px;
+    color: #2d2d2d;
+    font-size: 1.5rem;
+  }
+  .shop-item a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: #f0e88d;
+    color: #222;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+  .shop-item a:hover {
+    background: #e7d85b;
+  }
+  @media (max-width: 700px) {
+    .navbar {
+      flex-direction: column;
+      gap: 16px;
+      padding: 18px 20px;
+    }
+    .navbar h1 {
+      font-size: 1.6rem;
+    }
+    .buttons a {
+      padding: 10px 16px;
+    }
+  }
+  .box{
+    border-radius:10px;
+      width: 500px;
+    height: 300px;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    margin: 20px;
+    box-shadow:0 5px 15px black;
+    align-content:center;
+  }
+  .signup{
+justify-content:center;
+ display: flex;
+    align-items: center;
+    box-shadow:black;
+    font-family:Montserra;
+  }
+  .boxcontent{
+    size:10px;
+    font-family:Montserra;
+  }
+  .freshpicks{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding:10px;
+  }
+  .vegicards{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .vegi1{
+    max-width:280px;
+    background: #fff;
+    height:300px;
+    width:900px;
+    border: 1px solid rgb(242, 95, 4);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    background: linear-gradient(to bottom,
+      rgba(242, 225, 173, 0.74),
+     rgb(255, 255, 255));
+     padding:10px;
+     align-items:flex-start;
+     justify-content:center;
+  }
+  .vegimg{
+        width: 200px;
+    height: 150px;
+    border: 2px solid #f5d77c;
+    border-radius: 15px;
+    overflow: hidden;  
+  }
+  .vegi1 button{
+     transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+      display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: #fff8d9;
+    color: #2d2d2d;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+  }
+  
+</style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span class="brand-mark">L</span>
+      <h1>Local Market</h1>
+      <div>
+      <nav>
+      <ul>
+          <a href="#">products</a>
+      </ul>
+      </div>
+    </div>
+    <nav class="buttons" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#aboutus">About Us</a>
+      <a href="#shopnow">Shop Now</a>
+      <a href="#">sell Now</a>
+         <a href="#signin">sign in</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcomesection">
+      <div class="backbody">
+        <p class="tagline">Fresh finds, local charm</p>
+        <h1>Welcome to Local Market</h1>
+        <p>Discover fresh produce, handmade goods, and campus essentials from trusted local sellers.</p>
+      </div>
+    </section>
+    <section class="products">
+      <div class="section-heading">
+        <span>Popular picks</span>
+        <h2>Explore what our market offers</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🥬</div>
+          <h3>Fresh Groceries</h3>
+          <p>Healthy local produce and daily essentials from trusted sellers.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎒</div>
+          <h3>Student Supplies</h3>
+          <p>Books, stationery, and campus must-haves at affordable prices.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧺</div>
+          <h3>Local Handmade</h3>
+          <p>Unique handcrafted items made with care by local artisans.</p>
+        </article>
+      </div>
+      <div class="shop-grid">
+        <div class="shop-item">
+          <h3>Organic Picks</h3>
+          <a href="#freshpicks">Shop Now</a>
+        </div>
+        <div class="shop-item">
+          <h3>Campus Must-Haves</h3>
+          <a href="#">Shop Now</a>
+        </div>
+        <div class="shop-item">
+          <h3>Handmade Finds</h3>
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section id="shopnow">
+    <article id="freshpicks">
+    <div class="freshpicks">
+       <div class="vegicards">
+          <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+            </div>
+            <br>
+            <div class="vegicards">
+          <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+                      <div class="vegi1">
+            <div class="vegimg">
+             <img src="chillies.jpg">
+             </div>
+            <p>chillies</p>
+            <p>price:250rs</p>
+            <button>buy</button>
+            </div>
+            </div>
+            </article>
+              </section>
+</section>
+<hr>
+    <section class="aboutus" id="aboutus">
+    <article>
+    <h1 style="align-items: center;">ABOUT US</h1>
+</section>
+<hr>
+    <section class="signup" id="signin">
+    <div class="box">
+    <h1>SIGN IN NOW!!!<h1>
+    <div class="boxcontent">
+    <label>student</label>
+<input type= "text"><br><br>
+<label>contact number<label>
+<input type= "tel">
+<button>sign in</button>
+</div>
+</div>
+</section>
+  </main>
+</body>
+
+
