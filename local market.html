@@ -1,9 +1,13 @@
 <DOCTYPE>
 <html>
 <head>
-<title>Slide HTML</title>
-<style>
-  * {
+<title>Local Marketplace - Buy & Sell Local Items</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goan local market</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {
     box-sizing: border-box;
   }
    body {
@@ -137,26 +141,99 @@
         background-color:rgb(221, 207, 207);
     }
   }
-  .card {
+  .card1{
     flex: 1 1 260px;
-    max-width: 320px;
-    background: linear-gradient(180deg, #ffb347, #ff8c42);
+    max-width: 200px;
+        height:300px;
+       background-image:url("organic picks.jpg");
+       background-size:cover;
+    background-position:center;
+    padding: 28px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    align-element:bottom;
+    color: #fff;
+  }
+    .card2{
+    flex: 1 1 260px;
+    max-width: 200px;
+        height:300px;
+       background-image:url("shoes.jpg");
+       background-size:cover;
+    background-position:center;
     padding: 28px 22px;
     border-radius: 18px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
     color: #fff;
   }
-  .icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.2);
+    .card3{
+    flex: 1 1 260px;
+    max-width: 200px;
+        height:300px;
+       background-image:url("schoolstuff.jpg");
+       background-size:cover;
+    background-position:center;
+    padding: 28px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #fff;
+  }
+    .card4{
+    flex: 1 1 260px;
+    max-width: 200px;
+        height:300px;
+        background-image:url("beautypro.jpg");
+        background-size:cover;
+    background-position:center;
+    padding: 28px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #fff;
+  }  
+  .card5{
+    flex: 1 1 260px;
+    max-width: 200px;
+    height:300px;
+    background-image:url("cloths.jpg");
+    background-size:cover;
+    background-position:center;
+    padding: 28px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #fff;
+  }
+.card1:hover{
+  transform:scale(1.2);
+  box-shadow:rgb(0,0,0);
+}
+.card2:hover{
+  transform:scale(1.2);
+}
+.card3:hover{
+  transform:scale(1.2);
+}
+.card4:hover{
+  transform:scale(1.2);
+}
+.card5:hover{
+  transform:scale(1.2);
+}
+  .cardbut a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: #f0e88d;
+    color: #222;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+  .cardbut a:hover {
+    background: #e7d85b;
   }
   .card h3 {
     margin: 0 0 12px;
@@ -217,9 +294,9 @@
     }
   }
   .box{
-    border-radius:10px;
-      width: 500px;
-    height: 300px;
+    border-radius:0px;
+    width: 300px;
+    height: 500px;
     background-color: rgb(240, 240, 240);
     padding: 20px;
     margin: 20px;
@@ -237,58 +314,18 @@ justify-content:center;
     size:10px;
     font-family:Montserra;
   }
-  .freshpicks{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    padding:10px;
-  }
-  .vegicards{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
+  
+  
+
+  
+  .aboutus{
+    display:center;
+    justify-content:center;
     align-items:center;
   }
-  .vegi1{
-    max-width:280px;
-    background: #fff;
-    height:300px;
-    width:900px;
-    border: 1px solid rgb(242, 95, 4);
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    background: linear-gradient(to bottom,
-      rgba(242, 225, 173, 0.74),
-     rgb(255, 255, 255));
-     padding:10px;
-     align-items:flex-start;
-     justify-content:center;
-  }
-  .vegimg{
-        width: 200px;
-    height: 150px;
-    border: 2px solid #f5d77c;
-    border-radius: 15px;
-    overflow: hidden;  
-  }
-  .vegi1 button{
-     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-      display: inline-block;
-    padding: 12px 22px;
-    border-radius: 30px;
-    background: #fff8d9;
-    color: #2d2d2d;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+ 
 
-  }
-  
-</style>
+    </style>
 </head>
 <body>
   <header class="navbar">
@@ -326,21 +363,23 @@ justify-content:center;
         <h2>Explore what our market offers</h2>
       </div>
       <div class="cards">
-        <article class="card">
-          <div class="icon">🥬</div>
-          <h3>Fresh Groceries</h3>
-          <p>Healthy local produce and daily essentials from trusted sellers.</p>
+        <article class="card1">
+        <div class="cardbut"><a href=#>shop now</a></div>
         </article>
-        <article class="card">
-          <div class="icon">🎒</div>
-          <h3>Student Supplies</h3>
-          <p>Books, stationery, and campus must-haves at affordable prices.</p>
+        <article class="card2">
+           <div class="cardbut"><a href=#>shop now</a></div>
         </article>
-        <article class="card">
-          <div class="icon">🧺</div>
-          <h3>Local Handmade</h3>
-          <p>Unique handcrafted items made with care by local artisans.</p>
+        <article class="card3">
+        <div class="cardbut"><a href=#>shop now</a></div>
         </article>
+        <article class="card4">
+    <div class="cardbut"><a href=#>shop now</a></div>
+        </article>
+        <article class="card5">
+        <div class="cardbut"><a href=#>shop now</a></div>
+        </article>
+        </article>
+
       </div>
       <div class="shop-grid">
         <div class="shop-item">
@@ -358,101 +397,20 @@ justify-content:center;
       </div>
     </section>
     <hr>
-    <section id="shopnow">
-    <article id="freshpicks">
-    <div class="freshpicks">
-       <div class="vegicards">
-          <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-            </div>
-            <br>
-            <div class="vegicards">
-          <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-                      <div class="vegi1">
-            <div class="vegimg">
-             <img src="chillies.jpg">
-             </div>
-            <p>chillies</p>
-            <p>price:250rs</p>
-            <button>buy</button>
-            </div>
-            </div>
-            </article>
-              </section>
+ 
+       
+
 </section>
 <hr>
-    <section class="aboutus" id="aboutus">
-    <article>
+    <section  id="aboutus">
+    <article class="aboutus">
     <h1 style="align-items: center;">ABOUT US</h1>
+    <p>Welcome to Local Goan Bazar, a digital marketplace created to celebrate the unique products, traditions, and creativity of Goa.</p>
+
+<p>Our aim is to bring local Goan products closer to people by providing a simple and convenient platform to discover handmade crafts, local produce, traditional items, and products created by local sellers. From traditional handicrafts to everyday local goods, our marketplace represents the colourful and diverse spirit of Goa.</p>
+
+<p>We believe that supporting local sellers and artisans helps preserve Goa's rich cultural heritage while giving traditional products a modern platform. Local Goan Bazar is a place where local products meet modern shopping</p>
+</article>
 </section>
 <hr>
     <section class="signup" id="signin">
@@ -462,7 +420,7 @@ justify-content:center;
     <label>student</label>
 <input type= "text"><br><br>
 <label>contact number<label>
-<input type= "tel">
+<input type= "tel"><br>
 <button>sign in</button>
 </div>
 </div>
