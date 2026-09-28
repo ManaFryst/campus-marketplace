@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleStyle - Premium Shoes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ff6b35;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #eeeeee, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e85a25;
+        }
+
+        .hero-shoe {
+            font-size: 180px;
+        }
+
+        /* Products */
+        .products {
+            padding: 60px 8%;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+        }
+
+        .shoe-image {
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            border: none;
+            background: #111;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background: #ff6b35;
+        }
+
+        /* About */
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+            background: #111;
+            color: white;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .product-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-shoe {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">SoleStyle 👟</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Shoes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>Step Into Style.</h1>
+
+            <p>
+                Discover premium shoes designed for comfort,
+                performance and everyday style.
+            </p>
+
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+
+        <div class="hero-shoe">
+            👟
+        </div>
+
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+
+        <h2>Featured Shoes</h2>
+
+        <div class="product-container">
+
+            <div class="product">
+                <div class="shoe-image">👟</div>
+                <h3>Urban Runner</h3>
+                <p>Comfort Running Shoes</p>
+                <div class="price">₹2,999</div>
+                <button class="buy-btn" onclick="buyNow('Urban Runner')">
+                    Buy Now
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="shoe-image">👞</div>
+                <h3>Classic Leather</h3>
+                <p>Premium Formal Shoes</p>
+                <div class="price">₹3,499</div>
+                <button class="buy-btn" onclick="buyNow('Classic Leather')">
+                    Buy Now
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="shoe-image">🥾</div>
+                <h3>Mountain Pro</h3>
+                <p>Outdoor Hiking Shoes</p>
+                <div class="price">₹4,299</div>
+                <button class="buy-btn" onclick="buyNow('Mountain Pro')">
+                    Buy Now
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="shoe-image">👟</div>
+                <h3>Street Flex</h3>
+                <p>Casual Sneakers</p>
+                <div class="price">₹2,499</div>
+                <button class="buy-btn" onclick="buyNow('Street Flex')">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>Why SoleStyle?</h2>
+
+        <p>
+            At SoleStyle, we believe the right shoes can change the way
+            you move. Our collection combines modern design, comfort and
+            quality to create shoes for every lifestyle.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>© 2026 SoleStyle. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function buyNow(shoeName) {
+            alert("You selected: " + shoeName);
+        }
+    </script>
+
+</body>
+</html>
