@@ -1,2 +1,2 @@
 ## Website Hosted At
-ManaFryst.github.io/campus-marketplace
+(https://ManaFryst.github.io/campus-marketplace)
